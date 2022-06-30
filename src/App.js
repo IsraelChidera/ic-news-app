@@ -6,17 +6,21 @@ import MarketPlace from './components/MarketPlace';
 import Sidebar from './components/Sidebar';
 import Box from './UI/Box';
 
+
+
 function App() {
   return (
     <Box 
       className="App flex"
     >
 
-      <Box className='sidebar text-white'>
+      <Box className='sidebar text-white h-screen 
+        w-52 overflow-auto fixed top-0 left-0'
+      >
         <Sidebar />        
       </Box>
 
-      <Box className='main'>
+      <Box className='main ml-56'>
         <Box>
           <Navbar/>
         </Box>
