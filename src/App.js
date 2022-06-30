@@ -1,24 +1,33 @@
-import logo from './logo.svg';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Navbar from './components/Navbar';
+import Dashboard from './components/Dashboard';
+import MarketPlace from './components/MarketPlace';
+import Sidebar from './components/Sidebar';
+import Box from './UI/Box';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box 
+      className="App flex"
+    >
+
+      <Box className='sidebar text-white'>
+        <Sidebar />        
+      </Box>
+
+      <Box className='main'>
+        <Box>
+          <Navbar/>
+        </Box>
+
+        <Routes>
+          <Route exact path="/" element={ <Dashboard/> } />
+          <Route exact path="/marketplace" element={ <MarketPlace/> } />
+        </Routes>
+      </Box>
+
+    </Box>
   );
 }
 
