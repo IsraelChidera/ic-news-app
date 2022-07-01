@@ -1,12 +1,13 @@
 import React from 'react';
 import Box from '../Box';
 
-const index = ({children, className}) => {
+const index = ({children, className, ...rest}) => {
   return (
     <Box
-        className={`${className}`}    
+      className={`${className}`}  
+      {...rest}  
     >
-        {children}
+      {children}
     </Box>
   )
 }

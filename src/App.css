@@ -29,47 +29,11 @@ body {
   }
 
 .sidebar{
-    flex: 0.2;
+    /* flex: 0.2; */
     background: rgb(0, 21, 41);
 }
   
 .main{
-    flex: 0.8;
+    /* flex: 0.8; */
     width: 100%;
 }
-
-@media screen and (max-width:1300px){
-    .main{
-        margin-left: 50px;
-    }
-  }
-  
-@media screen and (max-width:1170px){
-    .main{
-        margin-left: 50px;
-    }
-}
-  
-@media screen and (max-width:1000px){
-    .main{
-        margin-left: 100px;
-    }
-}
-  
-@media screen and (max-width:800px){
-    .App{
-        flex-direction: column;
-        overflow: hidden;
-    }
-  
-    .navbar{
-        flex: 1;
-    }
-  
-    .sidebar{
-        flex: 1;
-        margin-top: 90px;
-        margin-left: 0px;
-        margin-right: 10px;
-    }
-}  

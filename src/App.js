@@ -15,20 +15,24 @@ function App() {
     >
 
       <Box className='sidebar text-white h-screen 
-        w-52 overflow-auto fixed top-0 left-0'
+        w-52 overflow-auto
+        fixed top-0 left-0
+        '
       >
         <Sidebar />        
       </Box>
 
-      <Box className='main ml-56'>
+      <Box className='main ml-52'>
         <Box>
           <Navbar/>
         </Box>
 
-        <Routes>
-          <Route exact path="/" element={ <Dashboard/> } />
-          <Route exact path="/marketplace" element={ <MarketPlace/> } />
-        </Routes>
+        <Box className='px-10'>
+          <Routes>
+            <Route exact path="/" element={ <Dashboard/> } />
+            <Route exact path="/marketplace" element={ <MarketPlace/> } />
+          </Routes>
+        </Box>
       </Box>
 
     </Box>
