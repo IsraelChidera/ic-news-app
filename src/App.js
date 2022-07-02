@@ -1,9 +1,9 @@
 import { Route, Routes } from 'react-router-dom';
-import './App.css';
-import Navbar from './components/Navbar';
-import Dashboard from './components/Dashboard';
-import MarketPlace from './components/MarketPlace';
-import Sidebar from './components/Sidebar';
+import './App.scss';
+import Navbar from './Layouts/Navbar';
+import Dashboard from './Layouts/Dashboard';
+import MarketPlace from './Layouts/MarketPlace';
+import Sidebar from './Layouts/Sidebar';
 import Box from './UI/Box';
 
 
@@ -22,7 +22,9 @@ function App() {
         <Sidebar />        
       </Box>
 
-      <Box className='main ml-52'>
+      <Box         
+        className='main ml-52'
+      >
         <Box>
           <Navbar/>
         </Box>

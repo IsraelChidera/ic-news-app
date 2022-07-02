@@ -1,3 +1,5 @@
+@import './assets/components/variables.scss';
+
 * {
     padding: 0;
     margin: 0;
@@ -5,7 +7,8 @@
 }
 
 body {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
+  
 }
 
 /* width */
@@ -30,10 +33,12 @@ body {
 
 .sidebar{
     /* flex: 0.2; */
-    background: rgb(0, 21, 41);
+    background: $sidebarBg;
 }
   
-.main{
-    /* flex: 0.8; */
+.main{    
     width: 100%;
+    height: 100vh;
+    background: $contentBg;
+    color: #fff;
 }

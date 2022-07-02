@@ -5,6 +5,7 @@ import Processing from './Processing';
 import CustomBlock from './CustomBlock';
 import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons';
 import { Menu, Button, Modal } from 'antd';
+import '../assets/components/_marketPlace.scss';
 
 const Dashboard = () => {
     
@@ -15,16 +16,15 @@ const Dashboard = () => {
     
 
   return (
-    <Box className='pt-4 mx-auto w-full'>
-        <Text className="text-2xl font-bold">
+    <Box className='marketplace'>
+        <Text className="marketplaceHeader">
             MarketPlace
         </Text>
 
-        <Box className='mt-10'>
+        <Box className='mt-10 marketPlaceInput'>
             <input
                 type="text"
-                placeholder='search'
-                className='py-2 w-full pl-2 border rounded-md'
+                placeholder='search'               
             />    
         </Box>
 
@@ -33,6 +33,7 @@ const Dashboard = () => {
                 <Menu 
                     mode="horizontal" 
                     defaultSelectedKeys={['processing']}
+                    style={{background:"#212529", color:"#fff"}}
                 >
                     <Menu.Item 
                         key="processing" 

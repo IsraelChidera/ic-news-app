@@ -12,7 +12,8 @@ import {
 } from '@ant-design/icons';
 import { Button, Menu, Typography, Avatar} from 'antd';
 import {NavLink} from 'react-router-dom';
-import '../App.css';
+import '../App.scss';
+import '../assets/components/_sidebar.scss';
 
 function getItem(label, key, icon, children, type) {
   return {
@@ -83,7 +84,7 @@ const Sidebar = () => {
   };
 
   return (
-    <Box>
+    <Box className='sidebar'>
         
       <Box 
         className=''
@@ -108,7 +109,7 @@ const Sidebar = () => {
           defaultOpenKeys={['sub1']}
           mode="inline"
           items={items}
-          theme="dark"
+          style={{background: '#212529', color: "#fff"}}
         />
 
         <Text className='text-xs pl-2 pt-6'>
@@ -124,7 +125,7 @@ const Sidebar = () => {
           // defaultOpenKeys={['sub1']}
           mode="inline"
           items={itemTwo}
-          theme="dark"
+          style={{background: '#212529', color: "#fff"}}
         />
       </Box>
     </Box>

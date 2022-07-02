@@ -1,0 +1,73 @@
+@import './variables.scss';
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: $navbarBg;
+    color: $semiWhite;
+    padding: 0 1rem;
+
+    .menuSearch{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 0;
+
+        .closeMenuIcon{
+            margin-right: 1rem;
+        }
+    }
+
+    .profile{
+        padding: 1rem 0.8rem;
+        display: flex;
+
+        .avatar {
+            margin-right: 0.5rem;
+        }
+
+        .profileName {
+            font-size: 0.875rem;
+            font-weight: 700;
+        }
+
+        .profileRole{
+            font-size: 0.75rem;
+        }
+    }
+}
+
+.navbarSearch {
+    position: relative;
+
+    input{       
+        background: #202328;
+        border: none;
+        height: 38px;
+        padding-left: 35px;
+        padding-right: 30px;
+        
+    }
+
+    .search-icon {
+        position: absolute;
+        top: 0;
+        left: 0.25rem;
+        color: $semiWhite;
+    }
+}
+
+.navICons {
+    display: flex;
+
+    .navIconsContainer{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .navIcon{
+        margin-right: 1rem;
+    }
+}
