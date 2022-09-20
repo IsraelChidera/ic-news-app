@@ -1,42 +1,51 @@
-import { Route, Routes } from 'react-router-dom';
 import './App.scss';
-import Navbar from './Layouts/Navbar';
-import Dashboard from './Layouts/Dashboard';
-import MarketPlace from './Layouts/MarketPlace';
-import Sidebar from './Layouts/Sidebar';
+import Sidebar from './assets/components/Sidebar';
+import SideNav from './assets/components/SideNav';
+import Navbar from './assets/components/Navbar';
+import WorldNews from './assets/components/WorldNews';
+import SportNews from './assets/components/SportNews';
+import HealthNews from './assets/components/HealthNews';
+import Home from './Pages/Home';
+import More from './Pages/More';
 import Box from './UI/Box';
-
-
+import {Routes, Route} from 'react-router-dom';
 
 function App() {
   return (
     <Box 
-      className="App flex"
+      className="App bg-bgColor relative"
     >
-
-      <Box className='sidebar text-white h-screen 
-        w-52 overflow-auto
-        fixed top-0 left-0
-        '
-      >
-        <Sidebar />        
+      <Box className='sidenav fixed top-0 left-0 h-full z-10 '>
+        < SideNav />
       </Box>
 
-      <Box         
-        className='main ml-52'
-      >
-        <Box>
-          <Navbar/>
+      <Box className="ml-52 px-6">
+
+        <Box className='navbar py-4 z-20 sticky top-0'>
+          <Navbar />
+        </Box>
+        
+        <Box className=" mt-10 grid grid-cols-4 gap-4">
+          <Box className="mainpage col-span-3 ">
+            <Routes>
+
+              <Route path="/" element={< Home />}>
+                <Route path="/health" element={ < HealthNews />}/>
+                <Route path="/all" element={ < WorldNews />}/>
+                <Route path="/sport" element={ < SportNews />}/>
+              </Route>
+
+              <Route path="/more" element={ < More />}/>
+            </Routes>            
+          </Box>
+
+          <Box className="bg-blue-500 sidebar">
+            < Sidebar />
+          </Box>
         </Box>
 
-        <Box className='px-10'>
-          <Routes>
-            <Route exact path="/" element={ <Dashboard/> } />
-            <Route exact path="/marketplace" element={ <MarketPlace/> } />
-          </Routes>
-        </Box>
-      </Box>
-
+      </Box>            
+      
     </Box>
   );
 }
