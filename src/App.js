@@ -8,7 +8,10 @@ import HealthNews from './assets/components/HealthNews';
 import Home from './Pages/Home';
 import More from './Pages/More';
 import Box from './UI/Box';
+import Text from './UI/Text';
 import {Routes, Route} from 'react-router-dom';
+import AllNews from './assets/components/AllNews';
+import News from './assets/components/News';
 
 function App() {
   return (
@@ -27,16 +30,33 @@ function App() {
         
         <Box className=" mt-10 grid grid-cols-4 gap-4">
           <Box className="mainpage col-span-3 ">
+          
             <Routes>
+              <Route path="/" element={< Home />}/>
 
-              <Route path="/" element={< Home />}>
-                <Route path="/health" element={ < HealthNews />}/>
-                <Route path="/all" element={ < WorldNews />}/>
-                <Route path="/sport" element={ < SportNews />}/>
+              <Route element={< News />}>
+                <Route path="all-news" element={ < AllNews />}/>
+                <Route path="health" element={ < HealthNews />}/>
+                <Route path="foreign" element={ < WorldNews />}/>
+                <Route path="sport" element={ < SportNews />}/>
               </Route>
 
               <Route path="/more" element={ < More />}/>
-            </Routes>            
+            </Routes>  
+
+            <Box 
+              className="border-t border-textColor opacity-60 font-xs
+              py-4 text-textColor flex justify-between items-center
+              mt-20"
+            >
+                <Text>
+                  &copy; IC News, 2022
+                </Text>
+
+                <Text>
+                  Developed by Israel Chidera
+                </Text>
+            </Box>          
           </Box>
 
           <Box className="bg-blue-500 sidebar">

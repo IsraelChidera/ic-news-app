@@ -10,10 +10,10 @@ const News = () => {
           Top Stories for you
       </Text>
 
-      <Box className=" flex space-x-10 items-center mb-4 mt-2">
+      <Box className="text-base flex space-x-10 items-center mb-4 mt-2">
           <Text>
             <NavLink 
-              to="/"
+              to="/all-news"
               className={({ isActive }) =>
               isActive ? 'bg-primary text-white hover:text-white px-4 py-1 rounded-2xl' 
               : 
@@ -26,7 +26,7 @@ const News = () => {
 
           <Text>
             <NavLink 
-              to="/all"
+              to="/foreign"
               className={({ isActive }) =>
               isActive ? 'bg-primary text-white hover:text-white px-4 py-1 rounded-2xl' 
               : 
@@ -62,22 +62,7 @@ const News = () => {
               Health News
             </NavLink>              
           </Text>
-      </Box>
-
-      <Box className="bg-white p-4">
-          <Text className="font-bold text-base">
-            Samsung Galaxy F22 launched in India: 
-            Price, features, other details
-          </Text>
-
-          <Text>
-            Samsung Galaxy F22 has been launched 
-            in India. The new smartphone has been 
-            priced in the mid-range segment. The new 
-            smartphone is powered by a MediaTek chipset 
-            and features a high refresh rate AMOLED display.
-          </Text>
-      </Box>
+      </Box>      
 
       <Outlet />
     </main>

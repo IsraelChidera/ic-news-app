@@ -4,7 +4,7 @@ import News from '../assets/components/News'
 const Home = () => {
   return (
     <section>        
-        < News />
+        < News />        
     </section>
   )
 }
