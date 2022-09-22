@@ -8,7 +8,7 @@ import {NavLink} from 'react-router-dom';
 const SideNav = () => {
   return (
     <nav className="sidenav">
-        
+         
         <NavLink to="/">
             <Box className="px-6 flex items-center space-x-4 mt-2 mb-6">
                 <img
@@ -22,10 +22,17 @@ const SideNav = () => {
             </Box>
         </NavLink>
         
-
+        {/* navlinks */}
         <Box className="navlinks mt-10 space-y-6">
             <div className="links">
-                <NavLink to="/">
+                <NavLink 
+                    to="/"
+                    className={({ isActive }) =>
+                        isActive ? ' actives px-4 py-1 rounded-r-2xl' 
+                        : 
+                        ' text-textColor px-4 py-1'
+                    }     
+                >
                     <span className="flex px-6 items-center space-x-3 text-textColor">
                         <span>
                             <i className="fa-sharp  fa-solid fa-house"></i>
@@ -35,23 +42,17 @@ const SideNav = () => {
                         </span>
                     </span>                    
                 </NavLink>
-            </div>
+            </div>            
 
             <div className="links">
-                <a href="#">
-                    <span className="flex px-6 items-center space-x-3 text-textColor">
-                        <span>
-                            <i className="fa-solid fa-globe"></i>
-                        </span>
-                        <span>
-                            Around the World
-                        </span>
-                    </span>                    
-                </a>
-            </div>
-
-            <div className="links">
-                <a href="#">
+                <NavLink 
+                    to="/foreign"
+                    className={({ isActive }) =>
+                        isActive ? ' actives px-4 py-1 rounded-r-2xl' 
+                        : 
+                        ' text-textColor px-4 py-1'
+                    }     
+                >
                     <span className="flex px-6 items-center space-x-3 text-textColor">
                         <span>
                             <i className="fa-solid fa-money-bill-trend-up"></i>
@@ -60,11 +61,18 @@ const SideNav = () => {
                             Business
                         </span>
                     </span>                    
-                </a>
+                </NavLink>
             </div>
 
             <div className="links">
-                <a href="#">
+                <NavLink 
+                    to="/health"
+                    className={({ isActive }) =>
+                        isActive ? ' actives px-4 py-1 rounded-r-2xl' 
+                        : 
+                        ' text-textColor px-4 py-1'
+                    }     
+                >
                     <span className="flex px-6 items-center space-x-3 text-textColor">
                         <span>
                             <i className="fa-solid fa-dna"></i>
@@ -73,11 +81,18 @@ const SideNav = () => {
                             Health
                         </span>
                     </span>                    
-                </a>
+                </NavLink>
             </div>
 
             <div className="links">
-                <a href="#">
+                <NavLink 
+                    to="/entertainment"
+                    className={({ isActive }) =>
+                        isActive ? ' actives px-4 py-1 rounded-r-2xl' 
+                        : 
+                        ' text-textColor px-4 py-1'
+                    }     
+                >
                     <span className="flex px-6 items-center space-x-3 text-textColor">
                         <span>
                             <i className="fa-solid fa-music"></i>
@@ -86,11 +101,18 @@ const SideNav = () => {
                             Entertainment
                         </span>
                     </span>                    
-                </a>
+                </NavLink>
             </div>
 
             <div className="links">
-                <a href="#">
+                <NavLink 
+                    to="/sport"
+                    className={({ isActive }) =>
+                        isActive ? ' actives px-4 py-1 rounded-r-2xl' 
+                        : 
+                        ' text-textColor px-4 py-1'
+                    }      
+                >
                     <span className="flex px-6 items-center space-x-3 text-textColor">
                         <span>
                             <i className="fa-solid fa-medal"></i>
@@ -99,7 +121,7 @@ const SideNav = () => {
                             Sports
                         </span>
                     </span>                    
-                </a>
+                </NavLink>
             </div>
         </Box>
 

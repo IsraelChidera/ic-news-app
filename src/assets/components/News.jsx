@@ -22,7 +22,7 @@ const News = () => {
             >
               All
             </NavLink>              
-          </Text>
+          </Text> 
 
           <Text>
             <NavLink 
