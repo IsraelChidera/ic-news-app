@@ -13,6 +13,7 @@ import {Routes, Route} from 'react-router-dom';
 import AllNews from './assets/components/AllNews';
 import News from './assets/components/News';
 import { NewsContextProvider } from './context/NewsContext';
+import EntertainmentNews from './assets/components/EntertainmentNews';
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
                   <Route path="health" element={ < HealthNews />}/>
                   <Route path="foreign" element={ < WorldNews />}/>
                   <Route path="sport" element={ < SportNews />}/>
+                  <Route path="entertainment" element={ < EntertainmentNews />}/>
                 </Route>
 
                 <Route path="/more" element={ < More />}/>
@@ -74,11 +76,3 @@ function App() {
 }
 
 export default App;
-
-// Via querystring
-// GET https://newsapi.org/v2/everything?q=keyword&apiKey=43cbe1bd021346aaa04d29b088bb055b
-// Via X-Api-Key HTTP header
-// X-Api-Key: 43cbe1bd021346aaa04d29b088bb055b
-// Via Authorization HTTP header
-// Authorization: 43cbe1bd021346aaa04d29b088bb055b
-// 43cbe1bd021346aaa04d29b088bb055b

@@ -1,24 +1,22 @@
 import React from 'react';
-import { useNewsContext } from '../../context/NewsContext';
 import Box from '../../UI/Box';
 import Text from '../../UI/Text';
+import { useNewsContext } from '../../context/NewsContext';
 
-const WorldNews = () => {
+const EntertainmentNews = () => {
     const news = useNewsContext();
-    // console.log(news);
-    // console.log("bnn:",news.businessNews.news);
-   
-    return(
-        <section>
+
+  return (
+    <section>
              {
-            news.businessNews.length===0?
+            news.entertainmentNews.length===0?
             (
                 <h1>
                     Loading data ...
                 </h1>
             )
             :
-            news.businessNews.news.slice(0,1)?.map((news,i) =>
+            news.entertainmentNews.news.slice(0,1)?.map((news,i) =>
                 (
                     <Box className="bg-white p-4 grid grid-cols-4 gap-4" key={i}>
 
@@ -55,7 +53,7 @@ const WorldNews = () => {
         }
 
         {
-            news.businessNews.length===0?
+            news.entertainmentNews.length===0?
             (
                 <h1>
                     Loading data ...
@@ -67,7 +65,7 @@ const WorldNews = () => {
             (
             <Box className="mt-6 grid grid-cols-2 gap-4 gap-y-6">
                 {
-                    news.businessNews.news.slice(1)?.map((news,i)=>(
+                    news.entertainmentNews.news.slice(1)?.map((news,i)=>(
                         <Box
                             key={i}                             
                         >
@@ -109,7 +107,7 @@ const WorldNews = () => {
             )
         }
         </section>
-    )
+  )
 }
 
-export default WorldNews
+export default EntertainmentNews

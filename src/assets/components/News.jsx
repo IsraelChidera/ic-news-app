@@ -33,7 +33,7 @@ const News = () => {
               'bg-white text-textColor px-4 py-1 rounded-2xl'
               }  
             >
-              World News
+              Business News
             </NavLink>              
           </Text>
           
@@ -60,6 +60,19 @@ const News = () => {
               }  
             >
               Health News
+            </NavLink>              
+          </Text>
+
+          <Text>
+            <NavLink 
+              to="/entertainment"
+              className={({ isActive }) =>
+              isActive ? 'bg-primary text-white hover:text-white px-4 py-1 rounded-2xl' 
+              : 
+              'bg-white text-textColor px-4 py-1 rounded-2xl'
+              }  
+            >
+              Entertainment News
             </NavLink>              
           </Text>
       </Box>      

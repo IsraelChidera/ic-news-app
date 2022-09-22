@@ -4,6 +4,13 @@ import Text from '../../UI/Text';
 import '../../App.scss';
 
 const Sidebar = () => {
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); 
+    var yyyy = today.getFullYear();
+
+    today = mm + '/' + dd + '/' + yyyy;
+    console.log(today);
   return (
     <aside className="sidebar mb-10 pb-4">
         <Box className="bg-white rounded p-4 text-textColor ">
@@ -22,7 +29,7 @@ const Sidebar = () => {
             </Box>
 
             <Text className="text-xs">
-                20th of September, 2022
+                {today}
             </Text>
         </Box>
 
