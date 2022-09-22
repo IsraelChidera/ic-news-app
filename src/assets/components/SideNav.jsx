@@ -28,7 +28,7 @@ const SideNav = () => {
                 <NavLink to="/">
                     <span className="flex px-6 items-center space-x-3 text-textColor">
                         <span>
-                            <i class="fa-sharp  fa-solid fa-house"></i>
+                            <i className="fa-sharp  fa-solid fa-house"></i>
                         </span>
                         <span>
                             Top Stories
@@ -41,7 +41,7 @@ const SideNav = () => {
                 <a href="#">
                     <span className="flex px-6 items-center space-x-3 text-textColor">
                         <span>
-                            <i class="fa-solid fa-globe"></i>
+                            <i className="fa-solid fa-globe"></i>
                         </span>
                         <span>
                             Around the World
@@ -54,7 +54,7 @@ const SideNav = () => {
                 <a href="#">
                     <span className="flex px-6 items-center space-x-3 text-textColor">
                         <span>
-                            <i class="fa-solid fa-money-bill-trend-up"></i>
+                            <i className="fa-solid fa-money-bill-trend-up"></i>
                         </span>
                         <span>
                             Business
@@ -67,7 +67,7 @@ const SideNav = () => {
                 <a href="#">
                     <span className="flex px-6 items-center space-x-3 text-textColor">
                         <span>
-                            <i class="fa-solid fa-dna"></i>
+                            <i className="fa-solid fa-dna"></i>
                         </span>
                         <span>
                             Health
@@ -80,7 +80,7 @@ const SideNav = () => {
                 <a href="#">
                     <span className="flex px-6 items-center space-x-3 text-textColor">
                         <span>
-                            <i class="fa-solid fa-music"></i>
+                            <i className="fa-solid fa-music"></i>
                         </span>
                         <span>
                             Entertainment
@@ -93,7 +93,7 @@ const SideNav = () => {
                 <a href="#">
                     <span className="flex px-6 items-center space-x-3 text-textColor">
                         <span>
-                            <i class="fa-solid fa-medal"></i>
+                            <i className="fa-solid fa-medal"></i>
                         </span>
                         <span>
                             Sports

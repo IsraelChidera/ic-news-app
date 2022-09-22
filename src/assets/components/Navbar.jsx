@@ -20,7 +20,7 @@ const Navbar = () =>{
                 <Box className="flex items-center space-x-6">
                     <Box className="flex items-center space-x-2">
                         <span>
-                            <i class="fa-solid fa-user"></i>
+                            <i className="text-lg fa-solid fa-user"></i>
                         </span>
 
                         <span>
@@ -29,7 +29,7 @@ const Navbar = () =>{
                     </Box>
 
                     <span>
-                        <i class="fa-solid fa-angle-down"></i>
+                        <i className="fa-solid fa-angle-down"></i>
                     </span>
                 </Box>
             </Box>

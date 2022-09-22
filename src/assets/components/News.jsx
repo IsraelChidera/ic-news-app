@@ -13,7 +13,7 @@ const News = () => {
       <Box className="text-base flex space-x-10 items-center mb-4 mt-2">
           <Text>
             <NavLink 
-              to="/all-news"
+              to="/"
               className={({ isActive }) =>
               isActive ? 'bg-primary text-white hover:text-white px-4 py-1 rounded-2xl' 
               : 

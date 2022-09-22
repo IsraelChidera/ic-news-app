@@ -53,7 +53,7 @@ const Sidebar = () => {
 
            <Box>
                 <Text className="text-base space-x-3">
-                    <i class="fa-solid fa-bookmark"></i>
+                    <i className="fa-solid fa-bookmark"></i>
                     <span>
                         Quick Bytes
                     </span>
