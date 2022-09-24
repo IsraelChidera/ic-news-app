@@ -1,12 +1,17 @@
 import react from 'react';
 import Box from '../../UI/Box';
+import Text from '../../UI/Text';
+import logo from '../images/logo.png';
+import hamburger from '../images/hamburger.svg';
+import {NavLink} from 'react-router-dom';
 
 const Navbar = () =>{
 
     return(
         <nav className=" ">
-            <Box className="flex justify-between items-center w-full">
-                <form className="relative">
+            <Box className="hidden md:flex justify-between items-center w-full">                
+
+                <form className="relative ">
                     <input
                         type="text"
                         placeholder="Search for news"
@@ -16,7 +21,7 @@ const Navbar = () =>{
                     <i className="fa-solid fa-magnifying-glass
                         absolute top-3 right-4"></i>
                 </form>
-
+                
                 <Box className="flex items-center space-x-6">
                     <Box className="flex items-center space-x-2">
                         <span>
@@ -31,6 +36,59 @@ const Navbar = () =>{
                     <span>
                         <i className="fa-solid fa-angle-down"></i>
                     </span>
+                </Box>
+            </Box>
+
+            <Box className="mobileview md:hidden">
+                
+                <Box className="flex justify-between items-center ">
+                    <Box className="flex justify-center items-center">
+                        <Box className="md:hidden flex items-center">
+                            <img
+                                src={hamburger}
+                                alt="hamburger icon"
+                            />
+                        </Box>
+                        
+                        <NavLink to="/">
+                            <Box className="flex justify-center items-center">
+                                
+                                <Box className="px-0 md:px-6 flex items-center space-x-4 mt-2 mb-6">
+                                    <img
+                                        src={logo}
+                                        alt="logo icon"
+                                        className="logo"
+                                    />
+                                    <span className="text-lg font-bold text-primary">
+                                        IC News
+                                    </span>
+                                </Box>
+                            </Box>
+                        </NavLink>
+                    </Box>
+                    
+                    <Box className=" flex items-center justify-end space-x-6">
+                        <form className="relative ">
+                            <i className="fa-solid fa-magnifying-glass
+                                "></i>
+                        </form>
+                        
+                        <Box className="flex items-center space-x-6">
+                            <Box className="flex items-center space-x-2">
+                                <span>
+                                    <i className="text-lg fa-solid fa-user"></i>
+                                </span>
+
+                                <span>
+                                    My Profile
+                                </span>
+                            </Box>
+
+                            <span>
+                                <i className="fa-solid fa-angle-down"></i>
+                            </span>
+                        </Box>
+                    </Box>
                 </Box>
             </Box>
         </nav>

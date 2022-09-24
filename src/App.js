@@ -25,13 +25,13 @@ function App() {
           < SideNav />
         </Box>
 
-        <Box className="ml-52 px-6">
+        <Box className="ml-0 md:ml-52 px-6">
 
           <Box className='navbar py-4 z-20 sticky top-0'>
             <Navbar />
           </Box>
           
-          <Box className=" mt-10 grid grid-cols-4 gap-4">
+          <Box className=" mt-10 md:grid grid-cols-4 gap-4">
             <Box className="mainpage col-span-3 ">
             
               <Routes>
@@ -45,7 +45,7 @@ function App() {
                   <Route path="entertainment" element={ < EntertainmentNews />}/>
                 </Route>
 
-                <Route path="/more" element={ < More />}/>
+                <Route path="/news/:id" element={ < More />}/>
               </Routes>  
 
               <Box 
@@ -63,7 +63,7 @@ function App() {
               </Box>          
             </Box>
 
-            <Box className="bg-blue-500 sidebar">
+            <Box className="bg-blue-500 sidebar md:block hidden">
               < Sidebar />
             </Box>
           </Box>

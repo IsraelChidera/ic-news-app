@@ -8,11 +8,11 @@ body {
   scroll-behavior: smooth;  
   line-height: 1.4;
   font-size: 16px;
+
+  
+
 }
 
-a {
-  color: white;
-}
 
 .sidenav {
   font-size: 15px;
@@ -26,28 +26,6 @@ a {
 .ip2 {
   background: #0768B5;
 }
-
-// .navlinks {
-//   list-style: none;
-//   font-size: 15px;
-//   // display: flex; 
-//   // flex-direction: column; 
-//   .links {
-//     // margin: 24px 0;
-//     display: block;
-    
-//     a {
-//       display:block;
-//     }
-//     &:hover {
-//       background: rgba(47, 159, 248, 0.1);
-//       border-radius: 0px 37px 37px 0px;
-//       padding: 10px 0px;
-//       color: #2f9ff8;
-//     }
-    
-//   } 
-// }
 
 .navbar {
   background: #f4f9f8;
