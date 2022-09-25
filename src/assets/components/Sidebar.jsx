@@ -11,6 +11,7 @@ const Sidebar = () => {
 
     today = mm + '/' + dd + '/' + yyyy;
     console.log(today);
+
   return (
     <aside className="sidebar mb-10 pb-4">
         <Box className="bg-white rounded p-4 text-textColor ">
@@ -18,11 +19,7 @@ const Sidebar = () => {
                 Lagos, Nigeria
             </Text>
 
-            <Box>
-                <Text className="text-base">
-                    Sunny
-                </Text>
-
+            <Box>                
                 <Text className="text-xl font-bold">
                     31C
                 </Text>
@@ -41,7 +38,7 @@ const Sidebar = () => {
                 </span>
             </Text>
 
-            <div className="flex items-center justify-center">
+            <div>
                 <p className="text-xs">
                     Contribute stories and start
                     earning

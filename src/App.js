@@ -14,24 +14,32 @@ import AllNews from './assets/components/AllNews';
 import News from './assets/components/News';
 import { NewsContextProvider } from './context/NewsContext';
 import EntertainmentNews from './assets/components/EntertainmentNews';
+import { useState } from 'react';
 
 function App() {
+
+  const [open, setOpen] = useState(false);
+
+    const handleMobileMenu = () => {        
+        setOpen(!open);
+    }
   return (
     <NewsContextProvider>
       <Box 
         className="App bg-bgColor relative"
       >
         <Box className='sidenav fixed top-0 left-0 h-full z-10 '>
-          < SideNav />
+          < SideNav open={open}/>
         </Box>
 
-        <Box className="ml-0 md:ml-52 px-6">
+        <Box className="ml-0 lg:ml-52 px-6">
 
           <Box className='navbar py-4 z-20 sticky top-0'>
-            <Navbar />
+            <Navbar handleMobileMenu={handleMobileMenu} />
           </Box>
           
-          <Box className=" mt-10 md:grid grid-cols-4 gap-4">
+          <Box className="mt-4 md:mt-10 lg:grid grid-cols-4 gap-4">
+
             <Box className="mainpage col-span-3 ">
             
               <Routes>
@@ -50,7 +58,7 @@ function App() {
 
               <Box 
                 className="border-t border-textColor opacity-60 font-xs
-                py-4 text-textColor flex justify-between items-center
+                py-4 text-textColor block md:flex text-center justify-between items-center
                 mt-20"
               >
                   <Text>
@@ -63,7 +71,18 @@ function App() {
               </Box>          
             </Box>
 
-            <Box className="bg-blue-500 sidebar md:block hidden">
+            {/* {
+              open?
+              (
+
+              )
+              :
+              (
+
+              )
+            } */}
+            
+            <Box className="bg-blue-500 sidebar lg:block hidden">
               < Sidebar />
             </Box>
           </Box>

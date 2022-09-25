@@ -1,15 +1,21 @@
-import react from 'react';
+import react, {useState} from 'react';
 import Box from '../../UI/Box';
 import Text from '../../UI/Text';
 import logo from '../images/logo.png';
 import hamburger from '../images/hamburger.svg';
 import {NavLink} from 'react-router-dom';
 
-const Navbar = () =>{
+const Navbar = ({handleMobileMenu}) =>{
+    // const [open, setOpen] = useState(false);
+
+    // const handleMobileMenu = () => {
+    //     alert("yrs");
+    //     setOpen(!open);
+    // }
 
     return(
         <nav className=" ">
-            <Box className="hidden md:flex justify-between items-center w-full">                
+            <Box className="hidden lg:flex justify-between items-center w-full">                
 
                 <form className="relative ">
                     <input
@@ -39,14 +45,15 @@ const Navbar = () =>{
                 </Box>
             </Box>
 
-            <Box className="mobileview md:hidden">
+            <Box className="mobileview lg:hidden">
                 
                 <Box className="flex justify-between items-center ">
                     <Box className="flex justify-center items-center">
-                        <Box className="md:hidden flex items-center">
+                        <Box className="lg:hidden hidden flex items-center">
                             <img
                                 src={hamburger}
                                 alt="hamburger icon"
+                                onClick={handleMobileMenu}
                             />
                         </Box>
                         
@@ -67,13 +74,13 @@ const Navbar = () =>{
                         </NavLink>
                     </Box>
                     
-                    <Box className=" flex items-center justify-end space-x-6">
+                    <Box className="flex items-center justify-end space-x-6">
                         <form className="relative ">
                             <i className="fa-solid fa-magnifying-glass
                                 "></i>
                         </form>
                         
-                        <Box className="flex items-center space-x-6">
+                        <Box className="hidden lg:flex items-center space-x-6">
                             <Box className="flex items-center space-x-2">
                                 <span>
                                     <i className="text-lg fa-solid fa-user"></i>

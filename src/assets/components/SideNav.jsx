@@ -6,13 +6,14 @@ import logo from '../images/logo.png';
 import hamburger from '../images/hamburger.svg';
 import {NavLink} from 'react-router-dom';
 
-const SideNav = () => {
+const SideNav = ({open}) => {
   return (
-    <nav className="sidenav relative md:block hidden ">
-         <div className="md:hidden flex items-center absolute top-4 right-0">
+    <nav className={`sidenav relative lg:block hidden `}>
+        <div className="md:hidden hidden items-center absolute top-4 right-0">
             <img
                 src={hamburger}
                 alt="hamburger icon"
+                className='cursor pointer'
             />
         </div>
 

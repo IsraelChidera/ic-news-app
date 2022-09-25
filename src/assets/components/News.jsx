@@ -10,8 +10,8 @@ const News = () => {
           Top Stories for you
       </Text>
 
-      <Box className="text-base flex space-x-10 items-center mb-4 mt-2">
-          <Text>
+      <Box className="text-base scrollmenu flex space-x-4 md:space-x-10 items-center mb-4 mt-2">
+          <Text className="scrollmenuLinks">
             <NavLink 
               to="/"
               className={({ isActive }) =>
@@ -24,7 +24,7 @@ const News = () => {
             </NavLink>              
           </Text> 
 
-          <Text>
+          <Text className="scrollmenuLinks">
             <NavLink 
               to="/foreign"
               className={({ isActive }) =>
@@ -37,7 +37,7 @@ const News = () => {
             </NavLink>              
           </Text>
           
-          <Text>
+          <Text className="scrollmenuLinks">
             <NavLink 
               to="/sport"
               className={({ isActive }) =>
@@ -50,7 +50,7 @@ const News = () => {
             </NavLink>              
           </Text>
 
-          <Text>
+          <Text className="scrollmenuLinks">
             <NavLink 
               to="/health"
               className={({ isActive }) =>
@@ -63,7 +63,7 @@ const News = () => {
             </NavLink>              
           </Text>
 
-          <Text>
+          <Text className="scrollmenuLinks">
             <NavLink 
               to="/entertainment"
               className={({ isActive }) =>

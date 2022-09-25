@@ -18,10 +18,10 @@ const EntertainmentNews = () => {
             :
             news.entertainmentNews.news?.map((news,i) =>
                 (
-                    <Box className="bg-white p-4 " key={i}>
+                    <Box className="bg-white mt-6 rounded  p-4 " key={i}>
 
-                        <Box className="grid grid-cols-4 gap-4">
-                            <Box className="col-span-3">
+                        <Box className="md:grid block grid-cols-4 gap-4">
+                            <Box className="md:col-span-3">
                                 <Text className="font-bold text-lg">
                                     {news.title}
                                 </Text>
@@ -50,7 +50,7 @@ const EntertainmentNews = () => {
                             </Box>
                         </Box>
 
-                        <Box className="text-textColor text-base font-bold">                            
+                        <Box className="text-textColor md:pt-0 md:pb-0 pb-2 pt-4 text-base font-bold">                            
                             <a href={news.url}>
                                 Read more from original source
                             </a>

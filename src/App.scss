@@ -8,10 +8,22 @@ body {
   scroll-behavior: smooth;  
   line-height: 1.4;
   font-size: 16px;
-
-  
-
 }
+
+.scrollmenu {
+  overflow: auto;
+  white-space: nowrap;
+  .scrollmenuLinks {
+    display: inline-block;
+    text-align: center;
+  }
+
+  &::-webkit-scrollbar {
+    // display: none;
+  }
+}
+
+
 
 
 .sidenav {
